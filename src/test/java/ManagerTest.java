@@ -9,11 +9,13 @@ public class ManagerTest {
 
     @Before
     public void before(){
+
         manager1 = new Manager("Charlie", "AB123456C", 15000.00, "memes");
     }
 
     @Test
     public void hasAName() {
+
         assertEquals("Charlie", manager1.getName());
     }
 
@@ -40,7 +42,20 @@ public class ManagerTest {
 
     @Test
     public void canGetABonus() {
+
         assertEquals(150.00, manager1.payBonus(), 0.01);
+    }
+
+    @Test
+    public void canChangeNameNotNull() {
+        manager1.setName("Matt");
+        assertEquals("Matt", manager1.getName());
+    }
+
+    @Test
+    public void cannotChangeNameNull() {
+        manager1.setName("");
+        assertEquals("Charlie", manager1.getName());
     }
 
 }
