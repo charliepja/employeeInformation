@@ -1,4 +1,6 @@
-public class Employee {
+package staff;
+
+public abstract class Employee {
     private String name;
     private String nationalInsurance;
     private double salary;
@@ -22,7 +24,7 @@ public class Employee {
     }
 
     public void salaryIncrease(double salaryIncrement) {
-        this.salary = this.salary * salaryIncrement;
+        this.salary = this.salary + salaryIncrement;
     }
 
     public double payBonus() {
