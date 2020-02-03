@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 import staff.techStaff.DatabaseAdmin;
-import staff.techStaff.Developer;
 
 import static org.junit.Assert.assertEquals;
 
@@ -31,7 +30,7 @@ public class DatabaseAdminTest {
 
     @Test
     public void canGetSalaryIncrease() {
-        dataBaseAdmin1.salaryIncrease(300.00);
+        dataBaseAdmin1.raiseSalary(300.00);
         assertEquals(15300.00, dataBaseAdmin1.getSalary(), 0.01);
     }
 

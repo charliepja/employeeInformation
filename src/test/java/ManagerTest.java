@@ -34,7 +34,7 @@ public class ManagerTest {
 
     @Test
     public void canRaiseASalary() {
-        manager1.salaryIncrease(200.00);
+        manager1.raiseSalary(200.00);
         assertEquals(15200.00, manager1.getSalary(), 0.01);
     }
 
